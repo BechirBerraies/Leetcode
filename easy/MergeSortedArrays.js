@@ -44,13 +44,14 @@ var merge = function(nums1, m, nums2, n) {
     nums2.splice(nums2.length-n , nums2.length-n )
     nums1 = nums1.concat(nums2)
 
-    for (i=0 ; i < nums1.length ; i++ ){
-        if(nums1[i] > nums1[i+1]){
-            tempo = nums1[i]
-            nums1[i] = nums1[i+1]
-            nums1[i+1]= tempo
-        }
-    }
+    // for (i=0 ; i < nums1.length ; i++ ){
+    //     if(nums1[i] > nums1[i+1]){
+    //         tempo = nums1[i]
+    //         nums1[i] = nums1[i+1]
+    //         nums1[i+1]= tempo
+    //     }
+    // }
+    nums1.sort()
     return nums1
 };
 
