@@ -39,26 +39,21 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
-    
-    nums1.splice(nums1.length - m , nums1.length-m )
-    nums2.splice(nums2.length-n , nums2.length-n )
-    nums1 = nums1.concat(nums2)
-
-    // for (i=0 ; i < nums1.length ; i++ ){
-    //     if(nums1[i] > nums1[i+1]){
-    //         tempo = nums1[i]
-    //         nums1[i] = nums1[i+1]
-    //         nums1[i+1]= tempo
-    //     }
-    // }
-    nums1.sort()
-    return nums1
+    nums1.splice(m, nums1.length )
+    nums2.splice(n,nums2.length)
+    nums1.push(...nums2);
+    nums1.sort((a, b) => a - b);
+    return nums1;
 };
+
+nums2 = [2,5,6]
+n = 3
 
 
 nums1 = [1,2,3,0,0,0]
+
 m = 3
-nums2 = [2,5,6]
-n = 3
+
+
 
 console.log(merge(nums1,m,nums2,n));
