@@ -30,6 +30,5 @@ func strStr(haystack string, needle string) int16 {
 		}
 	}
 
-	result = 0
 	return result
 }
